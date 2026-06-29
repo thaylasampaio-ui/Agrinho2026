@@ -1,15 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-<meta charset="UTF-8"/>
-<title>Agrinho2026</title> 
+<html>
+
+<head>
+
+<meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agro</title>
+
+<style>
+
+body{
+    background-color:white;
+    color:black;
+    font-family:Arial;
+    font-size:20px;
+    margin:20px;
+}
+
+button{
+    margin:5px;
+}
+
+</style>
+
 </head>
+
 <body>
-    <h1></h1>
+
+<h1>O Agro</h1>
+
+<button onclick="escuro()">Modo Escuro</button>
+
+<button onclick="claro()">Modo Claro</button>
+
+<button onclick="aumentar()">A +</button>
+
+<button onclick="diminuir()">A -</button>
+
+<hr>
+
+<h2>Dados do usuário</h2>
+
+<p>Nome:</p>
+
+<input type="text" id="nome">
+
+<p>Idade:</p>
+
+<input type="number" id="idade">
+
+<br><br>
+
+<button onclick="mostrar()">Responder</button>
+
+<p id="resposta"></p>
+
+<hr>
+
+<h2>Sobre o Agro</h2>
+
+<p>
+ESCREVA AQUI O SEU TEXTO AUTORAL.
+</p>
+
+<p>
+Site oficial do Governo:
+</p>
+
+<a href="https://www.gov.br/agricultura" target="_blank">
+https://www.gov.br/agricultura
+</a>
+
+<script>
+
+var tamanho = 20;
+
+function aumentar(){
+    tamanho = tamanho + 2;
+    document.body.style.fontSize = tamanho + "px";
+}
+
+function diminuir(){
+    tamanho = tamanho - 2;
+    document.body.style.fontSize = tamanho + "px";
+}
+
+function escuro(){
+    document.body.style.backgroundColor="black";
+    document.body.style.color="white";
+}
+
+function claro(){
+    document.body.style.backgroundColor="white";
+    document.body.style.color="black";
+}
+
+function mostrar(){
+
+var nome = document.getElementById("nome").value;
+
+var idade = document.getElementById("idade").value;
+
+document.getElementById("resposta").innerHTML =
+"Olá " + nome + "! Você tem " + idade + " anos.";
+
+}
+
+</script>
+
 </body>
-
-
 
 </html>
