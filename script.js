@@ -15,17 +15,8 @@ function escuro(){
     document.body.style.color = "white";
 }
 
+/* volta para o estilo original do CSS */
 function claro(){
     document.body.style.backgroundColor = "#f4f4f4";
     document.body.style.color = "#222";
-}
-
-function mostrar(){
-
-var nome = document.getElementById("nome").value;
-var idade = document.getElementById("idade").value;
-
-document.getElementById("resposta").innerHTML =
-"Olá " + nome + ", você tem " + idade + " anos.";
-
 }
