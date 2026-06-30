@@ -3,112 +3,63 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Agrinho2026</title>
+    <title>Agro</title>
 
-<style>
-
-body{
-    background-color:white;
-    color:black;
-    font-family:Arial;
-    font-size:20px;
-    margin:20px;
-}
-
-button{
-    margin:5px;
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<h1>O Agro</h1>
+    <h1>O Agro</h1>
 
-<button onclick="escuro()">Modo Escuro</button>
+    <p>
+        Escreva aqui o seu texto sobre o agro.
+    </p>
 
-<button onclick="claro()">Modo Claro</button>
+    <hr>
 
-<button onclick="aumentar()">A +</button>
+    <h2>Acessibilidade</h2>
 
-<button onclick="diminuir()">A -</button>
+    <button onclick="modoEscuro()">Modo Escuro</button>
 
-<hr>
+    <button onclick="modoClaro()">Modo Claro</button>
 
-<h2>Dados do usuário</h2>
+    <button onclick="aumentarFonte()">A+</button>
 
-<p>Nome:</p>
+    <button onclick="diminuirFonte()">A-</button>
 
-<input type="text" id="nome">
+    <hr>
 
-<p>Idade:</p>
+    <h2>Dados do usuário</h2>
 
-<input type="number" id="idade">
+    <p>Nome:</p>
 
-<br><br>
+    <input type="text" id="nome">
 
-<button onclick="mostrar()">Responder</button>
+    <p>Idade:</p>
 
-<p id="resposta"></p>
+    <input type="number" id="idade">
 
-<hr>
+    <br><br>
 
-<h2>Sobre o Agro</h2>
+    <button onclick="mostrar()">Responder</button>
 
-<p>
-ESCREVA AQUI O SEU TEXTO AUTORAL.
-</p>
+    <p id="resposta"></p>
 
-<p>
-Site oficial do Governo:
-</p>
+    <hr>
 
-<a href="https://www.gov.br/agricultura" target="_blank">
-https://www.gov.br/agricultura
-</a>
+    <h2>Link</h2>
 
-<script>
+    <a href="https://www.gov.br/agricultura" target="_blank">
+        Clique aqui
+    </a>
 
-var tamanho = 20;
-
-function aumentar(){
-    tamanho = tamanho + 2;
-    document.body.style.fontSize = tamanho + "px";
-}
-
-function diminuir(){
-    tamanho = tamanho - 2;
-    document.body.style.fontSize = tamanho + "px";
-}
-
-function escuro(){
-    document.body.style.backgroundColor="black";
-    document.body.style.color="white";
-}
-
-function claro(){
-    document.body.style.backgroundColor="white";
-    document.body.style.color="black";
-}
-
-function mostrar(){
-
-var nome = document.getElementById("nome").value;
-
-var idade = document.getElementById("idade").value;
-
-document.getElementById("resposta").innerHTML =
-"Olá " + nome + "! Você tem " + idade + " anos.";
-
-}
-
-</script>
+    <script src="script.js"></script>
 
 </body>
 
