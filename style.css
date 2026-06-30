@@ -6,11 +6,11 @@ body{
     color: #222;
 }
 
-/* topo */
+/* cabeçalho */
 header{
     background-color: green;
     color: white;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -19,12 +19,13 @@ main{
     padding: 20px;
 }
 
-/* caixas */
+/* caixas de conteúdo */
 .caixa{
     background-color: white;
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
 /* botões */
@@ -42,14 +43,12 @@ button:hover{
     background-color: darkgreen;
 }
 
-/* inputs */
-input{
-    padding: 8px;
-    margin: 5px 0;
-    width: 100%;
-}
-
-/* link */
+/* links */
 a{
     color: green;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
