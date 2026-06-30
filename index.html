@@ -3,44 +3,162 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AGRINHO 2026</title>
+<title>Agro</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+
+body{
+    margin: 0;
+    font-family: Arial;
+    font-size: 20px;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* topo */
+header{
+    background-color: green;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* conteúdo */
+main{
+    padding: 20px;
+}
+
+/* botões */
+button{
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+/* caixas */
+.caixa{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+input{
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+a{
+    color: green;
+}
+
+</style>
 
 </head>
 
 <body>
 
-    <h1>AGRINHO 2026</h1>
+<header>
+    <h1>O Agro no Brasil</h1>
+    <p>Site educativo sobre agricultura e sociedade</p>
+</header>
 
-    <button onclick="escuro()">Modo Escuro</button>
-    <button onclick="claro()">Modo Claro</button>
-    <hr> 
+<main>
 
-    <br><br> 
+<div class="caixa">
 
-    <hr>
+<h2>Acessibilidade</h2>
 
-    <h2>O que é o Agrinho?</h2>
+<button onclick="escuro()">Modo Escuro</button>
+<button onclick="claro()">Modo Claro</button>
+<button onclick="aumentar()">A+</button>
+<button onclick="diminuir()">A-</button>
 
-    <p>
-        ESCREVA AQUI O SEU TEXTO AUTORAL.
-    </p>
+</div>
 
-    <h3>Sustentabilidade</h3>
+<div class="caixa">
 
-    <p>
-        escrever aqui
-    </p>
+<h2>Dados do usuário</h2>
 
-    <a href="https://www.gov.br/agricultura" target="_blank">
-        https://www.gov.br/agricultura
-    </a>
+<p>Nome:</p>
+<input type="text" id="nome">
 
-    <script src="script.js"></script>
+<p>Idade:</p>
+<input type="number" id="idade">
+
+<button onclick="mostrar()">Enviar</button>
+
+<p id="resposta"></p>
+
+</div>
+
+<div class="caixa">
+
+<h2>Sobre o Agro</h2>
+
+<p>
+ESCREVA AQUI O SEU TEXTO AUTORAL SOBRE O AGRO.
+</p>
+
+<p>
+Link oficial:
+</p>
+
+<a href="https://www.gov.br/agricultura" target="_blank">
+https://www.gov.br/agricultura
+</a>
+
+</div>
+
+</main>
+
+<script>
+
+var tamanho = 20;
+
+function aumentar(){
+    tamanho += 2;
+    document.body.style.fontSize = tamanho + "px";
+}
+
+function diminuir(){
+    tamanho -= 2;
+    document.body.style.fontSize = tamanho + "px";
+}
+
+function escuro(){
+    document.body.style.backgroundColor = "#111";
+    document.body.style.color = "white";
+}
+
+function claro(){
+    document.body.style.backgroundColor = "#f4f4f4";
+    document.body.style.color = "#222";
+}
+
+function mostrar(){
+
+var nome = document.getElementById("nome").value;
+var idade = document.getElementById("idade").value;
+
+document.getElementById("resposta").innerHTML =
+"Olá " + nome + ", você tem " + idade + " anos.";
+
+}
+
+</script>
 
 </body>
 

@@ -1,16 +1,55 @@
 body{
-    background-color: white;
-    color: black;
+    margin: 0;
     font-family: Arial;
     font-size: 20px;
-    margin: 20px;
+    background-color: #f4f4f4;
+    color: #222;
 }
 
-/* título */
-h1, h2{
-    color: green;
+/* topo */
+header{
+    background-color: green;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
+/* área principal */
+main{
+    padding: 20px;
+}
+
+/* caixas */
+.caixa{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* botões */
 button{
     margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+/* inputs */
+input{
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* link */
+a{
+    color: green;
 }
